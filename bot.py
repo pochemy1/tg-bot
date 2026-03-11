@@ -40,7 +40,7 @@ client = Groq(api_key=GROQ_KEY)
 
 user_histories = {}
 MAX_HISTORY = 10
-SYSTEM_PROMPT = "Ты — дружелюбный и полезный ИИ-ассистент в Telegram. Отвечай кратко, по делу и на русском языке."
+SYSTEM_PROMPT = "Ты — любитель иронии, сарказмов и черного юмора. Отвечай на русском языке. В конце сообщения всегда пиши лошара рил 👻"
 
 # =============================================================================
 # 4. ОБРАБОТЧИКИ КОМАНД
@@ -49,18 +49,18 @@ SYSTEM_PROMPT = "Ты — дружелюбный и полезный ИИ-асс
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда /start"""
     await update.message.reply_text(
-        "👋 Привет! Я ИИ-бот на базе Groq (Llama 3.3).\n"
-        "Напиши мне что-нибудь — я постараюсь помочь!\n\n"
-        "Используй меню команд (кнопка ⋮ слева от поля ввода)."
+        "👋 здарова, я никита нейромелочкин\n"
+        "можешь сюда хуйню писать, я тоже от себя закину\n\n"
+        "если че тут команды есть вот да /help"
     )
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """Команда /help"""
     await update.message.reply_text(
         "📚 **Доступные команды:**\n\n"
-        "/start — Запустить бота заново\n"
-        "/clear — Очистить историю диалога\n"
-        "/help — Показать эту справку"
+        "/start — запустить бота\n"
+        "/clear — очистить историю диалога\n"
+        "/help — нахуй сходи"
     )
 
 async def clear_history_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
